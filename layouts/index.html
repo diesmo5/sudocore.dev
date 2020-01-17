@@ -1,0 +1,403 @@
+{{ define "main" }} {{partial "navbar"}}
+
+<section id="header" class="vh-100">
+  <div
+    class="container text-center text-primary"
+    style="position: relative; top: 15rem;"
+  >
+    <img src="/assets/icon.png" alt="" class="w-25 pb-4" />
+    <h1 class="font-weight-bold text-uppercase text-graphite display-1">
+      sudocore
+    </h1>
+    <h1 class="font-weight-normal text-graphite">
+      Current Version: <b><i>J</i>Thai</b>
+    </h1>
+    <h6 class="text-small text-grey-light">
+      Date Released: {{.Date.Format "Jan 2006"}}
+    </h6>
+    <h4 class="font-weight-light m-5">
+      Web components for faster and easier web development. Build your own
+      design framework, or start with Sudocore.
+    </h4>
+    <a
+      href="#install"
+      class="btn btn-lg btn-outline-primary rounded-0 text-uppercase px-5 py-3"
+      >get started</a
+    >
+  </div>
+</section>
+
+<section id="mailchimp" class="bg-primary py-5">
+  <div class="container">
+    {{partial "mailchimp"}}
+  </div>
+</section>
+
+<section id="features" class="vh-100">
+  <div class="conatiner-fluid bg-primary p-2 mt-4 mb-5"></div>
+  <div class="container" style="position: relative; top: 11.5rem;">
+    <h1 class="font-weight-bold text-uppercase display-3 pt-5 my-4">
+      Features
+    </h1>
+    <div class="card-deck text-center text-primary">
+      <div class="card border-0">
+        <img
+        class="card-img-top"
+        src="/assets/svg/mobile-first.svg"
+        alt="Card image cap"
+        />
+        <div class="card-body">
+          <h4 class="card-title font-weight-bold">MOBILE FIRST</h4>
+        </div>
+      </div>
+      <div class="card border-0">
+        <img
+        class="card-img-top"
+        src="/assets/svg/versatile-design.svg"
+        alt="Card image cap"
+        />
+        <div class="card-body">
+          <h4 class="card-title font-weight-bold">VERSATILE DESIGN</h4>
+        </div>
+      </div>
+      <div class="card border-0">
+        <img
+        class="card-img-top"
+        src="/assets/svg/web-ecosystem.svg"
+        alt="Card image cap"
+        />
+        <div class="card-body">
+          <h4 class="card-title font-weight-bold">WEB ECOSYSTEM</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="install" class="vh-100">
+  <div class="conatiner-fluid bg-primary p-4 mt-4 mb-5"></div>
+  <div class="conatiner-fluid bg-primary p-2 mt-4 mb-5"></div>
+  <div class="container" style="position: relative; top: 11rem;">
+    <h1 class="font-weight-bold text-uppercase display-3 pt-5 my-4">
+      Installation
+    </h1>
+    <div class="row py-5">
+      <div class="col-12 p-3">
+        <h2 class="">Quick Start Installation</h2>
+        <h5 class="font-weight-light pb-4">
+          This is good for prototyping or building projects as fast as possible.
+        </h5>
+        <h5 class="font-weight-light">Install SudocoreCDN.</h5>
+        <input type="text" value="https://sudocore.dev/sudocore/5.0.0/sudocore.min.css" id="myInput" class="w-100 text-primary p-3">
+       <div class="py-2"></div>
+        <a        
+        onclick="copyCDN()"
+        class="btn btn-block btn-primary py-3 font-weight-bold text-white text-left"
+        >Download Sudocore Version 5.0.0 <i>J</i>Thai</a
+        >
+        <h5 class="font-weight-light pt-3">
+          Or
+        </h5>
+        <h5 class="font-weight-light">
+          Download the Sudocore Documentation
+        </h5>
+        <a
+        href="/docs/SUDOCORE v5.0.0.pdf" download
+        class="btn btn-block btn-primary py-3 font-weight-bold text-left"
+        >Read Sudocore Version 5.0.0 <i>J</i>Thai</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section id="grid" class="py-5">
+  <div class="conatiner-fluid bg-graphite p-5 mt-4 mb-5"></div>
+  <div class="conatiner-fluid bg-graphite p-2 mt-4 mb-5"></div>
+  <div class="py-5"></div>
+  <div class="container">
+    <h1 class="font-weight-bold text-uppercase text-primary display-3 py-5 my-4">sudocore grid</h1>
+    <h1 class="font-weight-bold text-uppercase display-3 py-5 my-4">Container vs container-fluid</h1>
+    <h1 class="font-weight-bold text-uppercase text-grey display-4 pt-5 my-4">.container</h1>
+    <h4 class="font-weight-light">.CONTAINER WILL CONTAIN YOUR CONSTRAIN YOU CONTENT TO THE CENTER OF THE SCREEN.</h4>
+    <div class="bg-primary w-100 rounded-pill py-3 mb-5"></div>
+    <h1 class="font-weight-bold text-uppercase text-grey display-4 pt-5 my-4">.container-fluid</h1>
+    <h4 class="font-weight-light">.CONTAINER-FLUID IS GREAT IF YOU WOULD LIKE YOUR CONTENT TO SPAN FROM EDGE TO EDGE OF THE DEVICE.</h4>
+  </div>
+  <div class="container-fluid">
+    <div class="bg-primary w-100 rounded-pill py-3"></div>
+  </div>
+  <div class="py-5"></div>
+  <div class="container">
+    <h1 class="font-weight-bold text-uppercase display-3 pt-5 mt-5">rows and columns</h1>
+    <h4 class="font-weight-light text-uppercase">Rows are good at keeping elements on the same line. Every row is devided into 12 columns. These 12 columns can be divided in any way that fits your needs. They can also be explicitly defined to act a certain way in responce to the screen size. </h4>
+    <h1 class="font-weight-bold text-uppercase text-grey display-4 pt-5 mt-4">.container</h1>
+    <h4 class="font-weight-light text-uppercase mb-5">This is an example of row and columns in a container.</h4>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-12 py-3 bg-primary rounded-pill text-center text-white font-weight-bold">col-lg-4 col-md-6 col-12</div>
+      <div class="col-lg-4 col-md-6 col-12 py-3 bg-primary rounded-pill text-center text-white font-weight-bold">col-lg-4 col-md-6 col-12</div>
+      <div class="col-lg-4 col-md-6 col-12 py-3 bg-primary rounded-pill text-center text-white font-weight-bold">col-lg-4 col-md-6 col-12</div>
+    </div>
+    <h1 class="font-weight-bold text-uppercase text-grey display-4 pt-5 my-4">.container-fluid</h1>
+    <h4 class="font-weight-light text-uppercase mb-5">This is an example of row and columns in a container-fluid.</h4>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-12 py-3 bg-primary rounded-pill text-center text-white font-weight-bold">col-lg-4 col-md-6 col-12</div>
+      <div class="col-lg-4 col-md-6 col-12 py-3 bg-primary rounded-pill text-center text-white font-weight-bold">col-lg-4 col-md-6 col-12</div>
+      <div class="col-lg-4 col-md-6 col-12 py-3 bg-primary rounded-pill text-center text-white font-weight-bold">col-lg-4 col-md-6 col-12</div>
+    </div>
+  </div>
+</section>
+
+<div class="py-5"></div>
+<div class="py-5"></div>
+
+<section id="colors" class="py-5">
+  <div class="container">
+    <h1 class="font-weight-bold text-uppercase text-primary display-3 py-5 my-4">colors</h1>
+    <div class="row">
+      {{ range $.Site.Data.colors }}
+      <div class="col-lg-3 col-md-4 col-6 text-center py-3">
+        <div class="bg-{{.color}}-light rounded-top py-3 text-white font-weight-bold">{{.color}}-light</div>
+        <div class="bg-{{.color}} py-3 text-white font-weight-bold">{{.color}}</div>
+        <div class="bg-{{.color}}-dark rounded-bottom py-3 text-white font-weight-bold">{{.color}}-dark</div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<div class="py-5"></div>
+<div class="py-5"></div>
+
+<section id="typography" class="py-5">
+  <div class="container">
+    <h1 class="font-weight-bold text-uppercase text-primary display-3 py-5 my-4">typography</h1>
+    <h1 class="font-weight-bold text-uppercase display-3 py-5 my-4">colors</h1>
+    <div class="row">
+      <div class="col-lg col-md-6 col-12 bg-graphite-dark p-5">
+        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            {{ range $.Site.Data.colors }}
+            <div class="carousel-item {{.toggle}} text-left">
+              <h1 class="font-weight-bold text-{{.color}}-light">.text-{{.color}}-light</h1>            
+              <h1 class="font-weight-bold text-{{.color}}">.text-{{.color}}</h1>            
+              <h1 class="font-weight-bold text-{{.color}}-dark">.text-{{.color}}-dark</h1>            
+            </div>      
+            {{ end }}
+          </div>
+        </div>     
+      </div>
+      <div class="col-lg-6 col-md-6 col-12 text-center p-5">
+        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            {{ range $.Site.Data.colors }}
+            <div class="carousel-item {{.toggle}} text-left">
+              <h1 class="font-weight-bold text-{{.color}}-light">.text-{{.color}}-light</h1>            
+              <h1 class="font-weight-bold text-{{.color}}">.text-{{.color}}</h1>            
+              <h1 class="font-weight-bold text-{{.color}}-dark">.text-{{.color}}-dark</h1>            
+            </div>      
+            {{ end }}
+          </div>
+        </div>     
+    </div>
+  </div>
+  <div class="container py-5">
+    <h1 class="font-weight-bold text-uppercase display-3 py-5 my-4">weight</h1>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12 p-5">
+        <h2 class="font-weight-light">.font-weight-light</h2>
+        <h2 class="font-weight-normal">.font-weight-normal</h2>
+        <h2 class="font-weight-dark">.font-weight-dark</h2>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12 bg-graphite-dark text-white p-5">
+        <h2 class="font-weight-light">.font-weight-light</h2>
+        <h2 class="font-weight-normal">.font-weight-normal</h2>
+        <h2 class="font-weight-dark">.font-weight-dark</h2>        
+      </div>
+    </div>
+  </div>
+  <div class="container py-5">
+    <h1 class="font-weight-bold text-uppercase display-3 py-5 my-4">font-family</h1>
+
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12">
+        <h1 class="py-2 font-primary">.font-primary</h1>
+        <h1 class="py-2 font-secondary">.font-secondary</h1>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <h1 class="py-2 font-serif">.font-serif</h1>
+        <h1 class="py-2 font-raleway">.font-raleway</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="py-5"></div>
+<div class="py-5"></div>
+
+<section id="backgrounds" class="py-5">
+  <div class="container">
+    <h1 class="font-weight-bold text-uppercase text-primary display-3 py-5 my-4">backgrounds</h1>
+    <div class="row">
+      {{ range $.Site.Data.colors }}
+      <div class="col-lg-3 col-md-4 col-6 text-center py-3">
+        <div class="bg-{{.color}}-light rounded-top py-3 text-white font-weight-bold">.bg-{{.color}}-light</div>
+        <div class="bg-{{.color}} py-3 text-white font-weight-bold">.bg-{{.color}}</div>
+        <div class="bg-{{.color}}-dark rounded-bottom py-3 text-white font-weight-bold">.bg-{{.color}}-dark</div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<div class="py-5"></div>
+<div class="py-5"></div>
+
+<section id="buttons" class="py-5">
+  <div class="container">
+    <h1 class="font-weight-bold text-uppercase text-primary display-3 py-5 my-4">buttons</h1>
+    <h1 class="font-weight-bold text-uppercase display-3 py-5 my-4">type</h1>
+    <h1 class="font-weight-bold text-uppercase text-grey display-4 pt-5 my-4">Normal Button</h1>
+    <a href="" class="btn btn-primary">.btn</a>
+    <h1 class="font-weight-bold text-uppercase text-grey display-4 pt-5 my-4">Large Button</h1>
+    <a href="" class="btn btn-lg btn-primary">.btn .btn-lg</a>
+    <h1 class="font-weight-bold text-uppercase text-grey display-4 pt-5 my-4">Button Block</h1>
+    <a href="" class="btn btn-block btn-primary">.btn .btn-block</a>
+    <h1 class="font-weight-bold text-uppercase text-grey display-4 pt-5 my-4">Remove curve</h1>
+    <a href="" class="btn btn-lg rounded-0 btn-primary">.btn .btn-lg .rounded-0</a>
+    <h1 class="font-weight-bold text-uppercase text-grey display-4 pt-5 my-4">Add padding</h1>
+    <a href="" class="btn btn-lg rounded-0 btn-primary px-5 py-3">.btn .btn-lg .rounded-0 .py-3 .px-5</a>
+    
+    <div class="py-5"></div>
+
+    <h1 class="font-weight-bold text-uppercase display-3 py-5 my-4">colors</h1>
+    <h1 class="font-weight-bold text-uppercase text-grey display-4 pt-5 my-4">Solid</h1>
+
+    <div class="row ">
+      {{ range $.Site.Data.colors }}
+      <div class="col-lg-4 col-md-4 col-6 text-center py-3">
+        <div class="btn btn-block btn-{{.color}}-light rounded-top py-3 text-white font-weight-bold">.btn-{{.color}}-light</div>
+        <div class="btn btn-block btn-{{.color}} py-3 text-white font-weight-bold">.btn-{{.color}}</div>
+      </div>
+      {{ end }}
+    </div>
+    <h1 class="font-weight-bold text-uppercase text-grey display-4 pt-5 my-4">Outline</h1>
+    <div class="row ">
+      {{ range $.Site.Data.colors }}
+      <div class="col-lg-4 col-md-4 col-6 text-center py-3">
+        <div class="btn btn-block btn-outline-{{.color}}-light rounded-top py-3 font-weight-bold">.btn-outline-{{.color}}-light</div>
+        <div class="btn btn-block btn-outline-{{.color}} py-3 font-weight-bold">.btn-outline-{{.color}}</div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<div class="py-5"></div>
+<div class="py-5"></div>
+
+<section id="cards" class="py-5">
+  <div class="container">
+    <h1 class="font-weight-bold text-uppercase text-primary display-3 py-5 my-4">cards</h1>
+  </div>
+
+  <div class="container">
+    <h1 class="font-weight-bold text-uppercase display-3 py-5 my-4">card-group</h1>
+    <div class="card-group">
+      <div class="card">
+        <img src="/assets/img/1280x720.jpg" class="card-img-top" alt="/assets/img/1280x720.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/img/1280x720.jpg" class="card-img-top" alt="/assets/img/1280x720.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/img/1280x720.jpg" class="card-img-top" alt="/assets/img/1280x720.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1 class="font-weight-bold text-uppercase display-3 py-5 my-4">card-deck</h1>
+    <div class="card-deck">
+      <div class="card">
+        <img src="/assets/img/1280x720.jpg" class="card-img-top" alt="/assets/img/1280x720.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/img/1280x720.jpg" class="card-img-top" alt="/assets/img/1280x720.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/img/1280x720.jpg" class="card-img-top" alt="/assets/img/1280x720.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="py-5"></div>
+<div class="py-5"></div>
+
+<section id="mailchimp" class="bg-primary py-5">
+  <div class="container">
+    {{partial "mailchimp"}}
+  </div>
+</section>
+
+<section id="sponsors" class="py-5">
+  <div class="container py-5">
+    <h1 class="font-weight-bold text-uppercase text-primary display-3 py-5 my-4">thank you!</h1>
+    <div class="row">
+      {{ range $.Site.Data.sponsors }}
+      <div class="col-1 m-auto p-2">
+          <img src="{{.logo}}" alt="" class="grayscale w-100">
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+<div class="py-5"></div>
+{{ end }}

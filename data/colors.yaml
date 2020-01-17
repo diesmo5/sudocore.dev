@@ -1,0 +1,41 @@
+red:
+  color: red
+  toggle: active
+pink:
+  color: pink
+purple:
+  color: purple
+indigo:
+  color: indigo
+yankee:
+  color: yankee
+picton:
+  color: picton
+blue:
+  color: blue
+cyan:
+  color: cyan
+teal:
+  color: teal
+green:
+  color: green
+lightgreen:
+  color: lightgreen
+lime:
+  color: lime
+yellow:
+  color: yellow
+amber:
+  color: amber
+orange:
+  color: orange
+redorange:
+  color: redorange
+brown:
+  color: brown
+grey:
+  color: grey
+bluegrey:
+  color: bluegrey
+graphite:
+  color: graphite
