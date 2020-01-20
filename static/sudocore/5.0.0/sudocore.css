@@ -2987,25 +2987,25 @@ fieldset:disabled a.btn {
 }
 
 .btn-grey-light {
-  color: var(--white) !important;
+  color: var(--graphite) !important;
   background-color: var(--grey-light) !important;
   border-color: var(--grey-light) !important;
 }
 
 .btn-grey-light:hover {
-  color: var(--white) !important;
+  color: var(--graphite) !important;
   background-color: var(--grey) !important;
   border-color: var(--grey) !important;
 }
 
 .btn-grey {
-  color: var(--white) !important;
+  color: var(--graphite) !important;
   background-color: var(--grey) !important;
   border-color: var(--grey) !important;
 }
 
 .btn-grey:hover {
-  color: var(--white) !important;
+  color: var(--graphite) !important;
   background-color: var(--grey-dark) !important;
   border-color: var(--grey-dark) !important;
 }
