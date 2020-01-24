@@ -3648,7 +3648,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-grey-light:hover {
-  color: var(--white);
+  color: var(--graphite);
   background-color: var(--grey-light);
   border-color: var(--grey-light);
 }
@@ -3661,7 +3661,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-grey:hover {
-  color: var(--white);
+  color: var(--graphite);
   background-color: var(--grey);
   border-color: var(--grey);
 }
